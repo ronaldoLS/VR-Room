@@ -176,6 +176,7 @@ GameObject:
   - component: {fileID: 203844589}
   - component: {fileID: 203844588}
   - component: {fileID: 203844587}
+  - component: {fileID: 203844590}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -285,13 +286,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 203844586}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.9237344, y: -0.21060753, z: -0.23666494, w: 0.2152882}
+  m_LocalRotation: {x: 0.9605387, y: -0.2650504, z: -0.07780759, w: 0.032553308}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 162.659, y: 33.576996, z: 30.955002}
+  m_LocalEulerAnglesHint: {x: 178.78, y: 9.6, z: 30.955002}
+--- !u!114 &203844590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 203844586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 475a1a33809c3c944b0a9b2c8a5ff5cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DayNightCycle
+  rotationSpeed: 5
+  sun: {fileID: 203844588}
 --- !u!1001 &340276795
 PrefabInstance:
   m_ObjectHideFlags: 0
