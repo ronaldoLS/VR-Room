@@ -6,7 +6,7 @@ public class Clock : MonoBehaviour
     [Header("Clock Settings")]
     [SerializeField] private float _time = 0f;
     [Tooltip("Time scale factor. 1 means real-time, 2 means twice as fast, etc. recomended 72 slow or 288 faster")]
-    [SerializeField] private float _timeScale = 10f;
+    [SerializeField] private float _timeScale = 400f;
     [SerializeField] private int _secunds = 0;
     [SerializeField] private int _minutes = 0;
     [SerializeField] private int _hours = 0;
@@ -30,6 +30,10 @@ public class Clock : MonoBehaviour
         else
             Destroy(gameObject);
 
+        if (_secunds > 0)
+        {
+
+        }
     }
 
     // Update is called once per frame
@@ -43,16 +47,9 @@ public class Clock : MonoBehaviour
         _minuteHand.transform.localRotation = Quaternion.Euler(minHandRotation, 0f, 0f);
         _hourHand.transform.localRotation = Quaternion.Euler(hourHandRotation, 0f, 0f);
 
-
         _time += Time.deltaTime * _timeScale;
-        _secunds = (int)(_time % 60);
-        _minutes = (int)((_time / 60) % 60);
-        _hours = (int)((_time / 3600) % 24);
-        if (_time >= 86400)
-        {
-            _days++;
-            _time = 0;
-        }
+
+        CalculateTimes();       
 
     }
     public int Secunds()
@@ -63,4 +60,17 @@ public class Clock : MonoBehaviour
     {
         return (_time % 86400f) / 86400f;
     }
+    public void CalculateTimes() 
+    {
+        _secunds = (int)(_time % 60);
+        _minutes = (int)((_time / 60) % 60);
+        _hours = (int)((_time / 3600) % 24);
+
+        if (_time >= 86400)
+        {
+            _days++;
+            _time = 0;
+        }
+    }
+
 }

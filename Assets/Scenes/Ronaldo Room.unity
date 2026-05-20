@@ -335,8 +335,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17449c57c752cca43a0fee083edb4f5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clock
-  _time: 0
-  _timeScale: 288
+  _time: 18000
+  _timeScale: 400
   _secunds: 0
   _minutes: 0
   _hours: 0
@@ -3134,7 +3134,7 @@ MonoBehaviour:
   m_Camera: {fileID: 2435125054861409734}
   m_OriginBaseGameObject: {fileID: 155480245869208569}
   m_CameraFloorOffsetObject: {fileID: 5555564888081902322}
-  m_RequestedTrackingOriginMode: 0
+  m_RequestedTrackingOriginMode: 1
   m_CameraYOffset: 1.1176
 --- !u!114 &8955975564100313070
 MonoBehaviour:
@@ -3465,15 +3465,15 @@ MonoBehaviour:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 2130566648}
   - {fileID: 203844589}
   - {fileID: 6140488902814369571}
-  - {fileID: 1497623484}
   - {fileID: 130009823}
+  - {fileID: 1497623484}
   - {fileID: 1384359407}
   - {fileID: 340276795}
   - {fileID: 483417559}
   - {fileID: 1127319813}
   - {fileID: 1652863892}
   - {fileID: 473710605}
-  - {fileID: 2130566648}
   - {fileID: 236612096}
