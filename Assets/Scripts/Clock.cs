@@ -5,9 +5,8 @@ public class Clock : MonoBehaviour
     public static Clock Instance { get; private set; }
     [Header("Clock Settings")]
     [SerializeField] private float _time = 0f;
-    [Tooltip("Time scale factor. 1 means real-time, 2 means twice as fast, etc.")]
+    [Tooltip("Time scale factor. 1 means real-time, 2 means twice as fast, etc. recomended 72 slow or 288 faster")]
     [SerializeField] private float _timeScale = 10f;
-    private float handsRotationOffset = -90f;
     [SerializeField] private int _secunds = 0;
     [SerializeField] private int _minutes = 0;
     [SerializeField] private int _hours = 0;
@@ -37,10 +36,10 @@ public class Clock : MonoBehaviour
     void Update()
     {
         float secHandRotation = 6f * _secunds;
-        float minHandRotation = 6f * _minutes;
-        float hourHandRotation = 30f * _hours;
-        
-        _secundHand.transform.localRotation = Quaternion.Euler(secHandRotation, 0f , 0f);
+        float minHandRotation = (_minutes * 6f) + (_secunds * 0.1f);
+        float hourHandRotation = (_hours * 30f) + (_minutes * 0.5f);
+
+        _secundHand.transform.localRotation = Quaternion.Euler(secHandRotation, 0f, 0f);
         _minuteHand.transform.localRotation = Quaternion.Euler(minHandRotation, 0f, 0f);
         _hourHand.transform.localRotation = Quaternion.Euler(hourHandRotation, 0f, 0f);
 
@@ -49,6 +48,19 @@ public class Clock : MonoBehaviour
         _secunds = (int)(_time % 60);
         _minutes = (int)((_time / 60) % 60);
         _hours = (int)((_time / 3600) % 24);
-        _days = (int)(_time / 86400);
+        if (_time >= 86400)
+        {
+            _days++;
+            _time = 0;
+        }
+
+    }
+    public int Secunds()
+    {
+        return _secunds;
+    }
+    public float NormalizedDayTime()
+    {
+        return (_time % 86400f) / 86400f;
     }
 }

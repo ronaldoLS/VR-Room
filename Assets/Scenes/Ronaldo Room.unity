@@ -286,13 +286,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 203844586}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.9605387, y: -0.2650504, z: -0.07780759, w: 0.032553308}
+  m_LocalRotation: {x: 0.94336176, y: -0.31771284, z: -0.056582097, w: 0.07697849}
   m_LocalPosition: {x: 0, y: 10.27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 178.78, y: 9.6, z: 30.955002}
+  m_LocalEulerAnglesHint: {x: 173.726, y: 9.0099945, z: 37.720993}
 --- !u!114 &203844590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -300,13 +300,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 203844586}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 475a1a33809c3c944b0a9b2c8a5ff5cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DayNightCycle
-  rotationSpeed: 5
-  sun: {fileID: 203844588}
+  _rotationOffset: {x: 90, y: 9, z: 33}
 --- !u!1 &236612094
 GameObject:
   m_ObjectHideFlags: 0
@@ -337,7 +336,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clock
   _time: 0
-  _timeScale: 1
+  _timeScale: 288
   _secunds: 0
   _minutes: 0
   _hours: 0
