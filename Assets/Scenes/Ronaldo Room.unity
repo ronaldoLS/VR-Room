@@ -363,6 +363,83 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca18123093a406f489183b8b9bbb1407, type: 3}
+--- !u!1 &126431172
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 126431173}
+  - component: {fileID: 126431174}
+  m_Layer: 0
+  m_Name: Continuous Turn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &126431173
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 126431172}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 953760869}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &126431174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 126431172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75b29b6c6428c984a8a73ffc2d58063b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.Locomotion.Turning.ContinuousTurnProvider
+  m_Mediator: {fileID: 953760870}
+  m_TransformationPriority: 0
+  m_TurnSpeed: 60
+  m_EnableTurnLeftRight: 1
+  m_EnableTurnAround: 0
+  m_LeftHandTurnInput:
+    m_InputSourceMode: 2
+    m_InputAction:
+      m_Name: Left Hand Turn
+      m_Type: 0
+      m_ExpectedControlType: Vector2
+      m_Id: cbed5ed3-560a-44cf-94c7-043ff7db85ee
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_InputActionReference: {fileID: -7374733323251553461, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+    m_ObjectReferenceObject: {fileID: 0}
+    m_ManualValue: {x: 0, y: 0}
+  m_RightHandTurnInput:
+    m_InputSourceMode: 2
+    m_InputAction:
+      m_Name: Right Hand Turn
+      m_Type: 0
+      m_ExpectedControlType: Vector2
+      m_Id: 31d3f3d6-bc4a-4dd0-9348-98664e620580
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_InputActionReference: {fileID: 0}
+    m_ObjectReferenceObject: {fileID: 0}
+    m_ManualValue: {x: 0, y: 0}
 --- !u!1 &130009821
 GameObject:
   m_ObjectHideFlags: 0
@@ -1890,6 +1967,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1613308013}
+  - {fileID: 126431173}
   m_Father: {fileID: 6140488902814369571}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &953760870
@@ -3740,7 +3818,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_InputActionReference: {fileID: -7374733323251553461, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+    m_InputActionReference: {fileID: 0}
     m_ObjectReferenceObject: {fileID: 0}
     m_ManualValue: {x: 0, y: 0}
   m_RightHandTurnInput:
