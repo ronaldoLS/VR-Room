@@ -632,7 +632,7 @@ MonoBehaviour:
   m_DistanceCalculationMode: 1
   m_SelectMode: 1
   m_FocusMode: 1
-  m_CustomReticle: {fileID: 8656087483511947524, guid: 50f8d835961353c4a8e0c4b77d7f8876, type: 3}
+  m_CustomReticle: {fileID: 7864146203200469631, guid: 86365c8372ea5954ab7917340b4d703e, type: 3}
   m_AllowGazeInteraction: 0
   m_AllowGazeSelect: 0
   m_OverrideGazeTimeToSelect: 0
@@ -2354,7 +2354,7 @@ PrefabInstance:
     - target: {fileID: 8860767003134355366, guid: 7d586b4a941812f4c96edf51d20fdc73, type: 3}
       propertyPath: m_CustomReticle
       value: 
-      objectReference: {fileID: 3521457681945940986, guid: 493691fe396bc5c40900e8a234c5c60e, type: 3}
+      objectReference: {fileID: 7864146203200469631, guid: 86365c8372ea5954ab7917340b4d703e, type: 3}
     - target: {fileID: 8860767003134355366, guid: 7d586b4a941812f4c96edf51d20fdc73, type: 3}
       propertyPath: m_MatchOrientation
       value: 2
@@ -3127,7 +3127,7 @@ PrefabInstance:
     - target: {fileID: 8860767003134355366, guid: 7d586b4a941812f4c96edf51d20fdc73, type: 3}
       propertyPath: m_CustomReticle
       value: 
-      objectReference: {fileID: 3521457681945940986, guid: 493691fe396bc5c40900e8a234c5c60e, type: 3}
+      objectReference: {fileID: 7864146203200469631, guid: 86365c8372ea5954ab7917340b4d703e, type: 3}
     - target: {fileID: 8860767003134355366, guid: 7d586b4a941812f4c96edf51d20fdc73, type: 3}
       propertyPath: m_MatchOrientation
       value: 2
@@ -3521,7 +3521,7 @@ PrefabInstance:
     - target: {fileID: 8860767003134355366, guid: 7d586b4a941812f4c96edf51d20fdc73, type: 3}
       propertyPath: m_CustomReticle
       value: 
-      objectReference: {fileID: 3521457681945940986, guid: 493691fe396bc5c40900e8a234c5c60e, type: 3}
+      objectReference: {fileID: 7864146203200469631, guid: 86365c8372ea5954ab7917340b4d703e, type: 3}
     - target: {fileID: 8860767003134355366, guid: 7d586b4a941812f4c96edf51d20fdc73, type: 3}
       propertyPath: m_MatchOrientation
       value: 2
@@ -4507,7 +4507,7 @@ PrefabInstance:
     - target: {fileID: 8860767003134355366, guid: 7d586b4a941812f4c96edf51d20fdc73, type: 3}
       propertyPath: m_CustomReticle
       value: 
-      objectReference: {fileID: 3521457681945940986, guid: 493691fe396bc5c40900e8a234c5c60e, type: 3}
+      objectReference: {fileID: 7864146203200469631, guid: 86365c8372ea5954ab7917340b4d703e, type: 3}
     - target: {fileID: 8860767003134355366, guid: 7d586b4a941812f4c96edf51d20fdc73, type: 3}
       propertyPath: m_MatchOrientation
       value: 2
@@ -4590,7 +4590,7 @@ PrefabInstance:
     - target: {fileID: 8860767003134355366, guid: 7d586b4a941812f4c96edf51d20fdc73, type: 3}
       propertyPath: m_CustomReticle
       value: 
-      objectReference: {fileID: 3521457681945940986, guid: 493691fe396bc5c40900e8a234c5c60e, type: 3}
+      objectReference: {fileID: 7864146203200469631, guid: 86365c8372ea5954ab7917340b4d703e, type: 3}
     - target: {fileID: 8860767003134355366, guid: 7d586b4a941812f4c96edf51d20fdc73, type: 3}
       propertyPath: m_MatchOrientation
       value: 2
@@ -5260,7 +5260,7 @@ PrefabInstance:
     - target: {fileID: 8860767003134355366, guid: 7d586b4a941812f4c96edf51d20fdc73, type: 3}
       propertyPath: m_CustomReticle
       value: 
-      objectReference: {fileID: 3521457681945940986, guid: 493691fe396bc5c40900e8a234c5c60e, type: 3}
+      objectReference: {fileID: 7864146203200469631, guid: 86365c8372ea5954ab7917340b4d703e, type: 3}
     - target: {fileID: 8860767003134355366, guid: 7d586b4a941812f4c96edf51d20fdc73, type: 3}
       propertyPath: m_MatchOrientation
       value: 2
