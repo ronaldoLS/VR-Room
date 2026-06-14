@@ -12,6 +12,7 @@ TagManager:
   - Flame
   - Trail
   - Ground
+  - Tennis Racket
   layers:
   - Default
   - TransparentFX
@@ -24,8 +25,8 @@ TagManager:
   - Hats
   - Raycast
   - Test
-  - 
-  - 
+  - Interactable
+  - Non interactable
   - 
   - 
   - 

@@ -19,8 +19,8 @@ public class TennisBall : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
 
-        // Check if the collided object has the tag "Ground"
-        if (collision.gameObject.CompareTag("Ground"))
+        // Check if the collided object has the tag "Ground" or "Tennis Racket"
+        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Tennis Racket"))
         {
             float magnitude = collision.relativeVelocity.magnitude; // Get the magnitude of the collision's relative velocity
             float audioMagnitude = Mathf.Clamp(magnitude / 10f, 0.1f, 1f);
