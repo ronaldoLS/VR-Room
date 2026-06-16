@@ -20,20 +20,24 @@ public class TennisBall : MonoBehaviour
     {
 
         // Check if the collided object has the tag "Ground" or "Tennis Racket"
-        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Tennis Racket"))
+        if (collision.gameObject.CompareTag("Ground") 
+            || collision.gameObject.CompareTag("Tennis Racket"))
         {
-            float magnitude = collision.relativeVelocity.magnitude; // Get the magnitude of the collision's relative velocity
-            float audioMagnitude = Mathf.Clamp(magnitude / 10f, 0.1f, 1f);
-            audioSource.volume = magnitude;
+            if (!audioSource.isPlaying)
+            {
+                float magnitude = collision.relativeVelocity.magnitude; // Get the magnitude of the collision's relative velocity
+                float audioMagnitude = Mathf.Clamp(magnitude / 10f, 0.1f, 1f);
+                audioSource.volume = magnitude;
 
-            if (audioMagnitude > 0.6)
-                audioSource.PlayOneShot(bounces[0]);
-            else if (audioMagnitude > 0.3)
-                audioSource.PlayOneShot(bounces[1]);
-            else if (audioMagnitude > 0.15)
-                audioSource.PlayOneShot(bounces[2]);
-            else
-                audioSource.PlayOneShot(bounces[3]);
+                if (audioMagnitude > 0.6)
+                    audioSource.PlayOneShot(bounces[0]);
+                else if (audioMagnitude > 0.3)
+                    audioSource.PlayOneShot(bounces[1]);
+                else if (audioMagnitude > 0.15)
+                    audioSource.PlayOneShot(bounces[2]);
+                else
+                    audioSource.PlayOneShot(bounces[3]);
+            }
         }
         
     }
