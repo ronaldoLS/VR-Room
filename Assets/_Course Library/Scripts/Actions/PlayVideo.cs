@@ -25,6 +25,9 @@ public class PlayVideo : MonoBehaviour
     private Material offMaterial = null;
     private int index = 0;
 
+    [Tooltip("Whether the video is currently playing or not")]
+    public bool isActivated = false;
+
     private void Awake()
     {
         meshRenderer = GetComponent<MeshRenderer>();
@@ -39,11 +42,13 @@ public class PlayVideo : MonoBehaviour
     private void OnEnable()
     {
         videoPlayer.prepareCompleted += ApplyVideoMaterial;
+        videoPlayer.loopPointReached += onVideoEnder;
     }
 
     private void OnDisable()
     {
         videoPlayer.prepareCompleted -= ApplyVideoMaterial;
+        videoPlayer.loopPointReached -= onVideoEnder;
     }
 
     private void Start()
@@ -58,9 +63,11 @@ public class PlayVideo : MonoBehaviour
         }
     }
 
+
     public void NextClip()
     {
         index = ++index % videoClips.Count;
+        videoPlayer.clip = videoClips[index];
         Play();
     }
 
@@ -68,6 +75,7 @@ public class PlayVideo : MonoBehaviour
     {
         index = --index % videoClips.Count;
         Play();
+
     }
 
     public void RandomClip()
@@ -75,7 +83,10 @@ public class PlayVideo : MonoBehaviour
         if (videoClips.Count > 0)
         {
             index = Random.Range(0, videoClips.Count);
-            Play();
+            if (isActivated)
+                Play();
+            else
+                Stop();
         }
     }
 
@@ -104,6 +115,17 @@ public class PlayVideo : MonoBehaviour
     {
         bool isPlaying = !videoPlayer.isPlaying;
         SetPlay(isPlaying);
+    }
+    public void ToggleIsActivated()
+    {
+        isActivated = !isActivated;
+
+
+        if (isActivated)
+            NextClip();
+
+        else
+            Stop();
     }
 
     public void TogglePlayPause()
@@ -143,5 +165,16 @@ public class PlayVideo : MonoBehaviour
 
         if (TryGetComponent(out VideoPlayer videoPlayer))
             videoPlayer.targetMaterialProperty = "_BaseMap";
+    }
+
+    // Called when the video ends, if isActivated is true, it will play the next clip in the list
+    private void onVideoEnder(VideoPlayer source)
+    {
+        
+        if (isActivated && videoClips.Count > 0)
+        {
+            NextClip(); 
         }
     }
+
+}
