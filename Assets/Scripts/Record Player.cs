@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class RecordPlayer : MonoBehaviour
 {
@@ -14,7 +15,6 @@ public class RecordPlayer : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>(); // Get the AudioSource component attached to the RecordPlayer GameObject
         randomIndex = Random.Range(0, musicTracks.Length); // Generate a random index to select a music track
-        audioSource.volume = 0.8f; // Set the volume of the AudioSource to 80%
         audioSource.clip = musicTracks[randomIndex]; // Set the randomly selected music track as the clip
         audioSource.Play(); // Start playing the music track
     }
