@@ -7,7 +7,7 @@ using UnityEngine;
 public class LaunchProjectile : MonoBehaviour
 {
     [Tooltip("The projectile that's created")]
-    public GameObject projectilePrefab = null;
+    public ObjectPool projectilePool = null;
 
     [Tooltip("The point that the project is created")]
     public Transform startPoint = null;
@@ -15,9 +15,14 @@ public class LaunchProjectile : MonoBehaviour
     [Tooltip("The speed at which the projectile is launched")]
     public float launchSpeed = 1.0f;
 
+    
+
+
     public void Fire()
     {
-        GameObject newObject = Instantiate(projectilePrefab, startPoint.position, startPoint.rotation);
+        GameObject newObject = projectilePool.GetObject();
+        newObject.transform.position = startPoint.position;
+        newObject.transform.rotation = startPoint.rotation;
 
         if (newObject.TryGetComponent(out Rigidbody rigidBody))
             ApplyForce(rigidBody);
@@ -28,4 +33,6 @@ public class LaunchProjectile : MonoBehaviour
         Vector3 force = startPoint.forward * launchSpeed;
         rigidBody.AddForce(force);
     }
+
+
 }
