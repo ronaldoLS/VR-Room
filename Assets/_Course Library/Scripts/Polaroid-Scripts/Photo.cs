@@ -17,7 +17,7 @@ public class Photo : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(EjectOverSeconds(1.5f));
+        StartCoroutine(EjectOverSeconds(1.4f));
     }
 
     public IEnumerator EjectOverSeconds(float seconds)
@@ -28,12 +28,12 @@ public class Photo : MonoBehaviour
         float elapsedTime = 0;
         while (elapsedTime < seconds)
         {
-            transform.position += transform.forward * Time.deltaTime * 0.1f;
+            transform.position += transform.forward * Time.deltaTime * 0.11f;
             elapsedTime += Time.deltaTime;
 
             yield return null;
+            
         }
-
         currentCollider.enabled = true;
     }
 

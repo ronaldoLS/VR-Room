@@ -3393,7 +3393,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2484746546667990539, guid: 5dd7a3f304f82154388ac0e15413da09, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2484746546667990539, guid: 5dd7a3f304f82154388ac0e15413da09, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12673,6 +12673,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1415105457}
+        m_TargetAssemblyTypeName: PlaySoundsFromList, Assembly-CSharp
+        m_MethodName: PlayAtIndex
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_Deactivated:
     m_PersistentCalls:
       m_Calls: []
@@ -15666,8 +15678,8 @@ Transform:
   m_GameObject: {fileID: 1707640039}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7071068, z: 0.7071068, w: 0}
-  m_LocalPosition: {x: 0, y: 0.0961, z: -0.0327}
-  m_LocalScale: {x: 0.0036, y: 0.002, z: 0.002}
+  m_LocalPosition: {x: -0, y: 0.0961, z: -0.0336}
+  m_LocalScale: {x: 0.0036, y: 0.002, z: 0.0036}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1656388969}
@@ -16427,7 +16439,7 @@ Transform:
   m_GameObject: {fileID: 1784540928}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.0205, z: 0.0501}
+  m_LocalPosition: {x: -0, y: 0.0296, z: -0.0405}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
