@@ -3393,7 +3393,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2484746546667990539, guid: 5dd7a3f304f82154388ac0e15413da09, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2484746546667990539, guid: 5dd7a3f304f82154388ac0e15413da09, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3434,10 +3434,6 @@ PrefabInstance:
     - target: {fileID: 2967950758205879473, guid: 5dd7a3f304f82154388ac0e15413da09, type: 3}
       propertyPath: m_Name
       value: Photograph
-      objectReference: {fileID: 0}
-    - target: {fileID: 2967950758205879473, guid: 5dd7a3f304f82154388ac0e15413da09, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3972,21 +3968,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 421526297}
     m_Modifications:
-    - target: {fileID: 182514697566950979, guid: ae789ad601c1b51489889f8e89d55e4d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.0079
-      objectReference: {fileID: 0}
-    - target: {fileID: 224563644597198914, guid: ae789ad601c1b51489889f8e89d55e4d, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5907851582807000832, guid: ae789ad601c1b51489889f8e89d55e4d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5907851582807000832, guid: ae789ad601c1b51489889f8e89d55e4d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.0321
       objectReference: {fileID: 0}
     - target: {fileID: 7030774928639268966, guid: ae789ad601c1b51489889f8e89d55e4d, type: 3}
       propertyPath: m_Name
@@ -9256,7 +9244,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1382374238612466272, guid: a10f9b5efa3afd144bd0ffbb1f149e92, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.181
+      value: -0.095
       objectReference: {fileID: 0}
     - target: {fileID: 1382374238612466272, guid: a10f9b5efa3afd144bd0ffbb1f149e92, type: 3}
       propertyPath: m_LocalPosition.y
@@ -9264,7 +9252,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1382374238612466272, guid: a10f9b5efa3afd144bd0ffbb1f149e92, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.366
+      value: 0.141
       objectReference: {fileID: 0}
     - target: {fileID: 1382374238612466272, guid: a10f9b5efa3afd144bd0ffbb1f149e92, type: 3}
       propertyPath: m_LocalRotation.w
@@ -12661,18 +12649,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1415105454}
-        m_TargetAssemblyTypeName: Polaroid, Assembly-CSharp
-        m_MethodName: TakePhoto
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   m_Deactivated:
     m_PersistentCalls:
       m_Calls: []
@@ -12775,7 +12751,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66b1f38fa032c4f4a8680638f9c83d69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Polaroid
-  photoPrefab: {fileID: 2967950758205879473, guid: 5dd7a3f304f82154388ac0e15413da09, type: 3}
+  photoPrefab: {fileID: 2967950758205879473, guid: 3dabf4d9563cdc0468cf785661c2ff17, type: 3}
   screenRenderer: {fileID: 1707640042}
   spawnLocation: {fileID: 1784540929}
 --- !u!82 &1415105456
@@ -15666,7 +15642,7 @@ Transform:
   m_GameObject: {fileID: 1707640039}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7071068, z: 0.7071068, w: 0}
-  m_LocalPosition: {x: 0, y: 0.0961, z: -0.0327}
+  m_LocalPosition: {x: -0, y: 0.0884, z: -0.0005}
   m_LocalScale: {x: 0.0036, y: 0.002, z: 0.002}
   m_ConstrainProportionsScale: 0
   m_Children: []
