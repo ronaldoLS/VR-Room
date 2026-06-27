@@ -30,9 +30,8 @@ public class Photo : MonoBehaviour
         {
             transform.position += transform.forward * Time.deltaTime * 0.11f;
             elapsedTime += Time.deltaTime;
-
-            yield return null;
-            
+            Debug.Log(elapsedTime);
+            yield return null;            
         }
         currentCollider.enabled = true;
     }
@@ -47,5 +46,6 @@ public class Photo : MonoBehaviour
     {
         transform.parent = null;
         applyPhysics.EnablePhysics();
+        
     }
 }

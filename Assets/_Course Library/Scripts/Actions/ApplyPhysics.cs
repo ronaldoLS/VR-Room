@@ -20,6 +20,7 @@ public class ApplyPhysics : MonoBehaviour
         rigidBody.collisionDetectionMode = originalMode;
         rigidBody.useGravity = true;
         rigidBody.isKinematic = false;
+        
     }
 
     public void DisablePhysics()
@@ -28,9 +29,10 @@ public class ApplyPhysics : MonoBehaviour
         rigidBody.useGravity = false;
         rigidBody.isKinematic = true;
     }
-    public void EnableGravity()
+    public void DisableGravity()
     {
-        rigidBody.useGravity = true;
+        rigidBody.useGravity = false;
+        rigidBody.isKinematic = true;
     }
 
 }
