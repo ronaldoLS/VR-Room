@@ -62,13 +62,11 @@ public class Polaroid : MonoBehaviour
     {
         renderCamera.enabled = true;
         screenRenderer.material.color = Color.white;
-        Debug.Log("Camera ligada");
     }
 
     public void TurnOff()
     {
         renderCamera.enabled = false;
         screenRenderer.material.color = Color.black;
-        Debug.Log("Camera desligada");
     }
 }

@@ -29,10 +29,4 @@ public class ApplyPhysics : MonoBehaviour
         rigidBody.useGravity = false;
         rigidBody.isKinematic = true;
     }
-    public void DisableGravity()
-    {
-        rigidBody.useGravity = false;
-        rigidBody.isKinematic = true;
-    }
-
 }

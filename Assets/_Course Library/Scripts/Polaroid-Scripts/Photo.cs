@@ -30,7 +30,6 @@ public class Photo : MonoBehaviour
         {
             transform.position += transform.forward * Time.deltaTime * 0.11f;
             elapsedTime += Time.deltaTime;
-            Debug.Log(elapsedTime);
             yield return null;            
         }
         currentCollider.enabled = true;
