@@ -38,7 +38,7 @@ public class Photo : MonoBehaviour
     public void SetImage(Texture2D texture)
     {
         imageRenderer.material.color = Color.white;
-        imageRenderer.material.mainTexture = texture;
+        imageRenderer.material.SetTexture("_BaseMap", texture);
     }
 
     public void EnablePhysics()

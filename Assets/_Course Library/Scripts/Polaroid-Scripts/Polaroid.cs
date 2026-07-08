@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.IO;
+using UnityEngine;
 
 public class Polaroid : MonoBehaviour
 {
@@ -21,8 +23,9 @@ public class Polaroid : MonoBehaviour
 
     private void CreateRenderTexture()
     {
-        RenderTexture newTexture = new RenderTexture(256, 256, 32, RenderTextureFormat.Default, RenderTextureReadWrite.sRGB);
-        newTexture.antiAliasing = 4;
+        RenderTexture newTexture = new RenderTexture(256, 256, 24, RenderTextureFormat.ARGB32);
+        //newTexture.antiAliasing = 4;
+
 
         renderCamera.targetTexture = newTexture;
         screenRenderer.material.mainTexture = newTexture;
@@ -30,32 +33,14 @@ public class Polaroid : MonoBehaviour
 
     public void TakePhoto()
     {
-        Photo newPhoto = CreatePhoto();
-        SetPhotoImage(newPhoto);
+        Photo photo = CreatePhoto();
+        StartCoroutine(CapturePhoto(photo));
     }
 
     private Photo CreatePhoto()
     {
         GameObject photoObject = Instantiate(photoPrefab, spawnLocation.position, spawnLocation.rotation, transform);
         return photoObject.GetComponent<Photo>();
-    }
-
-    private void SetPhotoImage(Photo photo)
-    {
-        Texture2D newTexture = RenderCameraToTexture(renderCamera);
-        photo.SetImage(newTexture);
-    }
-
-    private Texture2D RenderCameraToTexture(Camera camera)
-    {
-        camera.Render();
-        RenderTexture.active = camera.targetTexture;
-
-        Texture2D photo = new Texture2D(256, 256, TextureFormat.RGB24, false);
-        photo.ReadPixels(new Rect(0, 0, 256, 256), 0, 0);
-        photo.Apply();
-
-        return photo;
     }
 
     public void TurnOn()
@@ -68,5 +53,42 @@ public class Polaroid : MonoBehaviour
     {
         renderCamera.enabled = false;
         screenRenderer.material.color = Color.black;
+    }
+
+    public void SaveImage(Texture2D photo)
+    {
+        byte[] bytes = photo.EncodeToPNG();
+
+        File.WriteAllBytes(
+            Path.Combine(Application.persistentDataPath, "photo.png"),
+            bytes);
+    }
+
+    private IEnumerator CapturePhoto(Photo photo)
+    {
+        yield return new WaitForEndOfFrame();
+
+        RenderTexture rt = renderCamera.targetTexture;
+
+        RenderTexture.active = rt;
+
+        Texture2D tex = new Texture2D(
+            rt.width,
+            rt.height,
+            TextureFormat.RGB24,
+            false
+        );
+
+        tex.ReadPixels(
+            new Rect(0, 0, rt.width, rt.height),
+            0,
+            0
+        );
+
+        tex.Apply();
+
+        RenderTexture.active = null;
+
+        photo.SetImage(tex);
     }
 }
