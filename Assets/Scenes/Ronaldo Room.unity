@@ -2597,7 +2597,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2140264580367398490, guid: 33dc28eb77358df4394d6ecb6e5a188b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.9526
+      value: 0.841
       objectReference: {fileID: 0}
     - target: {fileID: 2140264580367398490, guid: 33dc28eb77358df4394d6ecb6e5a188b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -23396,7 +23396,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7958769061475812472, guid: abff5816a508a3d4dad931c6733e7e75, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23423,6 +23423,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 891840135823922604, guid: abff5816a508a3d4dad931c6733e7e75, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2002919838}
+    - targetCorrespondingSourceObject: {fileID: 891840135823922604, guid: abff5816a508a3d4dad931c6733e7e75, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2002919839}
     - targetCorrespondingSourceObject: {fileID: 7958769061475812472, guid: abff5816a508a3d4dad931c6733e7e75, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2002919827}
@@ -23585,25 +23588,13 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2002919838}
-        m_TargetAssemblyTypeName: PlayQuickSound, Assembly-CSharp
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2002919838}
-        m_TargetAssemblyTypeName: PlayQuickSound, Assembly-CSharp
-        m_MethodName: Stop
+      - m_Target: {fileID: 2002919839}
+        m_TargetAssemblyTypeName: Notebook, Assembly-CSharp
+        m_MethodName: StopAudio
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -23627,7 +23618,19 @@ MonoBehaviour:
       m_Calls: []
   m_Activated:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2002919839}
+        m_TargetAssemblyTypeName: Notebook, Assembly-CSharp
+        m_MethodName: RestartAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_Deactivated:
     m_PersistentCalls:
       m_Calls: []
@@ -23795,7 +23798,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2002919824}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0755a2ba17a31d643b4a27e3034d8a79, type: 3}
   m_Name: 
@@ -23803,6 +23806,21 @@ MonoBehaviour:
   sound: {fileID: 8300000, guid: fb3e6f3fd501f22458303b0af3e61bef, type: 3}
   volume: 1
   randomPitchVariance: 0
+--- !u!114 &2002919839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002919824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87cb18b446c0ce94199583c2b81faac2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Notebook
+  playAngle: -15
+  resetAngle: -5
+  audioClip: {fileID: 8300000, guid: fb3e6f3fd501f22458303b0af3e61bef, type: 3}
 --- !u!1001 &2005294536
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26782,7 +26800,7 @@ Transform:
   m_GameObject: {fileID: 155480245869208569}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1.6}
+  m_LocalPosition: {x: -0.018, y: 0, z: -1.699}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
