@@ -34,6 +34,16 @@ public class PlayQuickSound : MonoBehaviour
         audioSource.pitch = defaultPitch;
     }
 
+    public void Pause()
+    {
+        audioSource.Pause();
+    }
+
+    public void Stop()
+    {
+        audioSource.Stop();
+    }
+
     private void OnValidate()
     {
         AudioSource audioSource = GetComponent<AudioSource>();
