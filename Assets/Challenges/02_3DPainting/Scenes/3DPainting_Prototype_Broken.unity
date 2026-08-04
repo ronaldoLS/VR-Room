@@ -9124,7 +9124,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 7785142639058902457}
         m_TargetAssemblyTypeName: CreateTrail, Assembly-CSharp
-        m_MethodName: EndTrail
+        m_MethodName: StartTrail
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9151,7 +9151,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 7785142639058902457}
         m_TargetAssemblyTypeName: CreateTrail, Assembly-CSharp
-        m_MethodName: StartTrail
+        m_MethodName: EndTrail
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
