@@ -16909,7 +16909,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1282435353
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17862,7 +17862,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1334106274
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18228,10 +18228,10 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1613308012}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1613308015}
+        m_TargetAssemblyTypeName: toggleObjectActivation, Assembly-CSharp
+        m_MethodName: ToggleActivation
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -22569,6 +22569,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1613308013}
   - component: {fileID: 1613308014}
+  - component: {fileID: 1613308015}
   m_Layer: 3
   m_Name: Snap Turn
   m_TagString: Untagged
@@ -22638,6 +22639,18 @@ MonoBehaviour:
     m_InputActionReference: {fileID: -8525429354371678379, guid: c348712bda248c246b8c49b3db54643f, type: 3}
     m_ObjectReferenceObject: {fileID: 0}
     m_ManualValue: {x: 0, y: 0}
+--- !u!114 &1613308015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613308012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2164d1c9659bfc4e922c28b10183563, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::toggleObjectActivation
 --- !u!1001 &1629616538
 PrefabInstance:
   m_ObjectHideFlags: 0
